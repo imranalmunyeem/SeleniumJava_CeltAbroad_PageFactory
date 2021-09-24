@@ -1,4 +1,4 @@
-package test_cases;
+package user_authentication;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
@@ -10,9 +10,7 @@ import page_factory.LoginPage_PF;
 public class Login extends DriverSetup {
 	
 	@Test
-	public void LoginPage() throws InterruptedException {
-//		driver.get("https://www.celtabroad.com/admin/login");
-//		driver.get(baseUrl);
+	public void TestLogin() throws InterruptedException {
 		WebsiteURL url = new WebsiteURL();
 		url.siteUrl();
 		
