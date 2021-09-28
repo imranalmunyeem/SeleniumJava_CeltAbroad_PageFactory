@@ -1,24 +1,26 @@
 package com.celt.userauthentication;
 
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import base_class.DriverSetup;
-import pagefactory.LoginPage_PF;
+import pagefactory.LoginPagePF;
+import org.apache.logging.log4j.*;
 
 @Test
 public class Login extends DriverSetup {
-	public static String baseUrl = "https://www.celtabroad.com/admin/login";
+	
+	//private static Logger log = LogManager.getLogger(Login.class.getName());
+	public static String loginUrl = "https://www.celtabroad.com/public/admin/login";
 
 	@Test
-	public void TestLogin() throws InterruptedException {
+	public void testLogin() throws InterruptedException {
 
-		driver.get(baseUrl);
+		driver.get(loginUrl);
 
-		LoginPage_PF login = PageFactory.initElements(driver, LoginPage_PF.class);
+		LoginPagePF login = PageFactory.initElements(driver, LoginPagePF.class);
 
-		login.enterEmail();
-		login.enterPassword();
-		login.clickOnLogin();
+		login.loginToCeltabroad();
 
 	}
 

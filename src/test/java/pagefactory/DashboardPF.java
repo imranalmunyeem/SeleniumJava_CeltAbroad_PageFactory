@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 
 import base_class.DriverSetup;
 
-public class Dashboard_PF extends DriverSetup {
+public class DashboardPF extends DriverSetup {
 
 	// Email Locator
 	@FindBy(how = How.XPATH, using = "//*[@id=\\\"sidebar-menu\\\"]/ul/li[1]/a/span")

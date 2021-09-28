@@ -20,7 +20,7 @@ public class DriverSetup {
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://www.celtabroad.com/admin/");
+//		driver.get("https://www.celtabroad.com/public/admin/login");
 		driver.manage().window().maximize();
 	}
 

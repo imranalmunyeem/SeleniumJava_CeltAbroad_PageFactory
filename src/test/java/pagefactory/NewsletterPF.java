@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 
 import base_class.DriverSetup;
 
-public class Newsletter_PF extends DriverSetup {
+public class NewsletterPF extends DriverSetup {
 	// Search
 	@FindBy(how = How.XPATH, using = "//*[@id=\"newsletterdatatable-table_filter\"]/label/input")
 	@CacheLookup
