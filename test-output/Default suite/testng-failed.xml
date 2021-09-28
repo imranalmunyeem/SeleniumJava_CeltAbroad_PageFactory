@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="listeners.Screenshots">
+      <class name="com.celt.menus.SearchNewsletter">
         <methods>
-          <include name="TakeScreenshotTest"/>
+          <include name="TestSearch"/>
           <include name="close"/>
           <include name="setDriver"/>
         </methods>
-      </class> <!-- listeners.Screenshots -->
+      </class> <!-- com.celt.menus.SearchNewsletter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

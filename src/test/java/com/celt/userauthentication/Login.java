@@ -1,28 +1,25 @@
-package user_authentication;
+package com.celt.userauthentication;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import base_class.DriverSetup;
-import base_class.WebsiteURL;
-import page_factory.LoginPage_PF;
+import pagefactory.LoginPage_PF;
 
 @Test
 public class Login extends DriverSetup {
-	
+	public static String baseUrl = "https://www.celtabroad.com/admin/login";
+
 	@Test
 	public void TestLogin() throws InterruptedException {
-		WebsiteURL url = new WebsiteURL();
-		url.siteUrl();
-		
+
+		driver.get(baseUrl);
 
 		LoginPage_PF login = PageFactory.initElements(driver, LoginPage_PF.class);
-		
+
 		login.enterEmail();
 		login.enterPassword();
 		login.clickOnLogin();
-		
-		
+
 	}
-	
 
 }
