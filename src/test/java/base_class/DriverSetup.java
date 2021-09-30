@@ -2,6 +2,7 @@ package base_class;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -20,8 +21,9 @@ public class DriverSetup {
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-//		driver.get("https://www.celtabroad.com/public/admin/login");
+		driver.get("https://www.celtabroad.com/public/admin/login");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
 
 	@AfterSuite

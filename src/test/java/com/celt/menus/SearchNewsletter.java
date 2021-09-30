@@ -1,30 +1,25 @@
 package com.celt.menus;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
-
 import com.celt.userauthentication.Login;
-
 import base_class.DriverSetup;
-import pagefactory.LoginPagePF;
 import pagefactory.NewsletterPF;
 
-public class searchNewsletter extends DriverSetup{
-	public static String newsletter = "https://www.celtabroad.com/admin/newsletter";
-	
+public class SearchNewsletter extends DriverSetup {
+	//public static String newsletterUrl = "https://www.celtabroad.com/admin/newsletter";
+
 	@Test
-	public void TestSearch() throws InterruptedException {
+	public void testSearch() throws InterruptedException {
 		Login login = new Login();
 		login.testLogin();
-		driver.get(newsletter);
-		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//driver.get(newsletterUrl);
 		NewsletterPF newsletter = PageFactory.initElements(driver, NewsletterPF.class);
-		
-		
-		newsletter.Search();
-	
-		
-		
+
+		newsletter.verifyNewsletter();
+
 	}
 
 }

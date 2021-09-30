@@ -11,14 +11,14 @@ import base_class.DriverSetup;
 @Test
 public class PageTitle extends DriverSetup {
 	private static Logger log = LogManager.getLogger(PageTitle.class.getName());
-	public static String baseUrl = "https://www.celtabroad.com/admin/login";
+//	public static String baseUrl = "https://www.celtabroad.com/admin/login";
 
 	@Test
 	public void testTitle() {
 
 		// Navigate to the Website
 		String expectedTitle = "Celt";
-		driver.get(baseUrl);
+//		driver.get(baseUrl);
 
 		// Actual
 		String actualTitle = driver.getTitle();

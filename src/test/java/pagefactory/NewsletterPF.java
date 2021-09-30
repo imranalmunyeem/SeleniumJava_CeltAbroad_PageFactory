@@ -8,6 +8,11 @@ import org.openqa.selenium.support.How;
 import base_class.DriverSetup;
 
 public class NewsletterPF extends DriverSetup {
+	//Newsletter
+	@FindBy(how = How.XPATH, using = "//*[@id=\"sidebar-menu\"]/ul/li[8]/a")
+	@CacheLookup
+	WebElement clickOnNewsletter;
+	
 	// Search
 	@FindBy(how = How.XPATH, using = "//*[@id=\"newsletterdatatable-table_filter\"]/label/input")
 	@CacheLookup
@@ -22,22 +27,28 @@ public class NewsletterPF extends DriverSetup {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"newsletterdatatable-table_previous\"]")
 	@CacheLookup
 	WebElement clickOnPrevious;
-
-	// Method for clicking on Search Box
-	public void Search() {
-		clickOnSearch.click();
-
-	}
 	
-	//Method for Clicking on Next
-	public void next() {
+	public void verifyNewsletter() {
+		clickOnNewsletter.click();
+		clickOnSearch.sendKeys("test@gmail.com");
 		clickOnNext.click();
-	}
-	
-	//Method for Clicking on Previous
-	public void previous() {
 		clickOnPrevious.click();
 	}
-	
+//	// Method for clicking on Search Box
+//	public void Search() {
+//		
+//
+//	}
+//	
+//	//Method for Clicking on Next
+//	public void next() {
+//		
+//	}
+//	
+//	//Method for Clicking on Previous
+//	public void previous() {
+//		
+//	}
+//	
 
 }
